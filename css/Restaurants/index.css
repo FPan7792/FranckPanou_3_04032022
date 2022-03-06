@@ -1,0 +1,104 @@
+main {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+main img {
+  position: absolute;
+  height: 290px;
+  z-index: -10;
+  object-fit: cover;
+  object-position: center;
+  top: 0;
+}
+main > div {
+  background-color: #f4f4f4;
+  margin-top: 230px;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  padding: 1rem;
+}
+main > div .restaurant-bloc-titre {
+  margin: 1.2rem 0 2.3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main > div .restaurant-bloc-titre h2 {
+  text-transform: capitalize;
+  font-family: "Shrikhand", cursive;
+  font-size: 1.6rem;
+}
+main > div .restaurant-bloc-titre i {
+  margin-right: 1rem;
+}
+main > div h3 {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 1rem;
+  margin: 2rem 0 1.4rem 0;
+}
+main > div h3::after {
+  position: absolute;
+  content: "";
+  display: inline-block;
+  border-top: #99e2d0 3px solid;
+  width: 40px;
+  top: 130%;
+  left: 0;
+}
+main > div .carte-recette {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 0.8rem 0.6rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+main > div .carte-recette p {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.4rem;
+}
+main > div .carte-recette div {
+  display: flex;
+  justify-content: space-between;
+}
+main > div .carte-recette div span {
+  font-size: 0.9rem;
+}
+main > div .carte-recette div :first-child {
+  font-weight: 300;
+}
+main > div .carte-recette div :last-child {
+  font-weight: bold;
+  margin-right: 0.4rem;
+}
+main > div .bouton-commander {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+}
+main > div .bouton-commander button {
+  cursor: pointer;
+  margin: 0 auto;
+  border: none;
+  border-radius: 30px;
+  height: 2.5rem;
+  margin-bottom: 1rem;
+  padding: 0 2.5rem;
+  color: #efefef;
+  font-weight: bold;
+  font-size: 0.8rem;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  background: #9356dc;
+  background: -moz-linear-gradient(355deg, #9356dc 22%, #ff79da 90%);
+  background: -webkit-linear-gradient(355deg, #9356dc 22%, #ff79da 90%);
+  background: linear-gradient(355deg, #9356dc 22%, #ff79da 90%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
+}
+
+/*# sourceMappingURL=index.css.map */

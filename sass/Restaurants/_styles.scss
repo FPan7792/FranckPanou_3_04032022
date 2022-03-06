@@ -1,0 +1,132 @@
+main {
+   position: relative;
+   display: inline-block;
+   width: 100%;
+   height: 100%;
+
+   img {
+      position: absolute;
+      height: 290px;
+      z-index: -10;
+      object-fit: cover;
+      object-position: center;
+      top: 0;
+   }
+
+   > div {
+      background-color: #f4f4f4;
+      // border: black 2px solid;
+      margin-top: 230px;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+      padding: 1rem;
+
+      .restaurant-bloc-titre {
+         // padding-top: 1rem;
+         margin: 1.2rem 0 2.3rem;
+         // border: green 2px solid;
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+
+         h2 {
+            text-transform: capitalize;
+            font-family: 'Shrikhand', cursive;
+            font-size: 1.6rem;
+         }
+
+         i {
+            margin-right: 1rem;
+         }
+      }
+
+      h3 {
+         position: relative;
+         text-transform: uppercase;
+         font-weight: 400;
+         font-size: 1rem;
+         margin: 2rem 0 1.4rem 0;
+
+         &::after {
+            position: absolute;
+            content: '';
+            display: inline-block;
+            border-top: #99e2d0 3px solid;
+            width: 40px;
+            top: 130%;
+            left: 0;
+         }
+      }
+
+      .carte-recette {
+         background-color: #fff;
+         border-radius: 12px;
+         padding: 0.8rem 0.6rem;
+         margin-bottom: 1rem;
+         box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+
+         p {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 0.4rem;
+         }
+
+         div {
+            display: flex;
+            justify-content: space-between;
+
+            span {
+               font-size: 0.9rem;
+            }
+
+            :first-child {
+               font-weight: 300;
+            }
+
+            :last-child {
+               font-weight: bold;
+               margin-right: 0.4rem;
+            }
+         }
+      }
+
+      .bouton-commander {
+         width: 100%;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         margin: 3rem 0;
+
+         button {
+            cursor: pointer;
+            margin: 0 auto;
+            border: none;
+            border-radius: 30px;
+            height: 2.5rem;
+            margin-bottom: 1rem;
+            padding: 0 2.5rem;
+            color: #efefef;
+            font-weight: bold;
+            font-size: 0.8rem;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+            background: rgb(147, 86, 220);
+            background: -moz-linear-gradient(
+               355deg,
+               rgba(147, 86, 220, 1) 22%,
+               rgba(255, 121, 218, 1) 90%
+            );
+            background: -webkit-linear-gradient(
+               355deg,
+               rgba(147, 86, 220, 1) 22%,
+               rgba(255, 121, 218, 1) 90%
+            );
+            background: linear-gradient(
+               355deg,
+               rgba(147, 86, 220, 1) 22%,
+               rgba(255, 121, 218, 1) 90%
+            );
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
+         }
+      }
+   }
+}
