@@ -1,12 +1,22 @@
+// variables couleurs
+$pricipal_violet: #9356dc;
+$pricipal_rose: #ff79da;
+$pricipal_vert: #99e2d0;
+$fond_blanc: #f4f4f4;
+$fond_gris: #f1f1f1;
+// --------
+
 main {
    position: relative;
    display: inline-block;
    width: 100%;
    height: 100%;
+   overflow: hidden;
 
    img {
       position: absolute;
-      height: 290px;
+      width: 100%;
+      min-width: 400px;
       z-index: -10;
       object-fit: cover;
       object-position: center;
@@ -14,7 +24,7 @@ main {
    }
 
    > div {
-      background-color: #f4f4f4;
+      background-color: $fond_blanc;
       // border: black 2px solid;
       margin-top: 230px;
       border-top-left-radius: 40px;
@@ -61,31 +71,86 @@ main {
       .carte-recette {
          background-color: #fff;
          border-radius: 12px;
-         padding: 0.8rem 0.6rem;
+         // padding: 0.8rem 0.6rem;
          margin-bottom: 1rem;
          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+         cursor: pointer;
+         display: flex;
 
-         p {
-            font-weight: bold;
-            font-size: 1.1rem;
-            margin-bottom: 0.4rem;
+         > :first-child {
+            padding: 0.8rem 0.6rem;
+            min-width: 80%;
+            width: 100%;
+
+            p {
+               font-weight: bold;
+               font-size: 1.1rem;
+               margin-bottom: 0.4rem;
+               white-space: nowrap;
+               overflow: hidden;
+               text-overflow: ellipsis;
+            }
+
+            div {
+               display: flex;
+               justify-content: space-between;
+
+               span {
+                  font-size: 0.9rem;
+               }
+
+               :first-child {
+                  font-weight: 300;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+               }
+
+               :last-child {
+                  font-weight: bold;
+                  margin-right: 0.4rem;
+               }
+            }
          }
 
-         div {
+         .label-check {
+            color: $fond_blanc;
+            background-color: $pricipal_vert;
+            width: 0;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.4s ease-in;
+            border-top-right-radius: 12px;
+            border-bottom-right-radius: 12px;
+         }
 
-            span {
-               font-size: 0.9rem;
+         .fa-circle-check {
+            opacity: 0;
+         }
+
+         &:hover {
+            .label-check {
+               width: 25%;
+               // border: black 2px solid;
+            }
+            .fa-circle-check {
+               animation: spin-circle-check 0.5s forwards;
+            }
+         }
+
+         @keyframes spin-circle-check {
+            0% {
+               transform: rotate(0deg);
             }
 
-            :first-child {
-               font-weight: 300;
+            1% {
+               opacity: 100%;
             }
 
-            :last-child {
-               font-weight: bold;
-               margin-right: 0.4rem;
+            100% {
+               transform: rotate(360deg);
+               opacity: 100%;
             }
          }
       }
@@ -126,6 +191,12 @@ main {
                rgba(255, 121, 218, 1) 90%
             );
             filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
+            transition: all 0.2s;
+
+            &:hover {
+               box-shadow: 0 5px 8px rgba(0, 0, 0, 0.4);
+               transform: scale(1.05);
+            }
          }
       }
    }

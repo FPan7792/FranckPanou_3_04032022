@@ -44,6 +44,8 @@ main #exploration p {
   margin-bottom: 1.8rem;
 }
 main #exploration button {
+  cursor: pointer;
+  transition: all 0.1s ease-in;
   border: none;
   border-radius: 30px;
   height: 3rem;
@@ -58,6 +60,10 @@ main #exploration button {
   background: -webkit-linear-gradient(355deg, #9356dc 22%, #ff79da 90%);
   background: linear-gradient(355deg, #9356dc 22%, #ff79da 90%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
+}
+main #exploration button:hover {
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
 }
 main #fonctionnement {
   padding: 1.5rem 1rem;
@@ -78,6 +84,11 @@ main #fonctionnement div {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
   background-color: #f4f4f4;
   cursor: pointer;
+  transition: all 0.1s ease-in;
+}
+main #fonctionnement div:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  background-color: #f8f8f8;
 }
 main #fonctionnement div i {
   padding: 0 2rem;
@@ -117,6 +128,10 @@ main #restaurants .conteneur-cartes-restaurants .carte-restaurant {
   margin-bottom: 1rem;
   position: relative;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.1s ease-in-out;
+}
+main #restaurants .conteneur-cartes-restaurants .carte-restaurant:hover {
+  box-shadow: 0 4px 9px rgba(0, 0, 0, 0.4);
 }
 main #restaurants .conteneur-cartes-restaurants .carte-restaurant span {
   position: absolute;

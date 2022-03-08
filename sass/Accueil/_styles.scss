@@ -50,6 +50,8 @@ main {
       }
 
       button {
+         cursor: pointer;
+         transition: all 0.1s ease-in;
          border: none;
          border-radius: 30px;
          height: 3rem;
@@ -76,6 +78,11 @@ main {
             rgba(255, 121, 218, 1) 90%
          );
          filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
+
+         &:hover {
+            box-shadow: 0 5px 8px rgba(0, 0, 0, 0.4);
+            transform: scale(1.05);
+         }
       }
    }
    #fonctionnement {
@@ -98,6 +105,13 @@ main {
          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
          background-color: #f4f4f4;
          cursor: pointer;
+         transition: all 0.1s ease-in;
+         // transition: background-color 0.8s ease-in-out;
+
+         &:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            background-color: #f8f8f8;
+         }
 
          i {
             padding: 0 2rem;
@@ -144,6 +158,11 @@ main {
             margin-bottom: 1rem;
             position: relative;
             box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+            transition: all 0.1s ease-in-out;
+
+            &:hover {
+               box-shadow: 0 4px 9px rgba(0, 0, 0, 0.4);
+            }
 
             span {
                position: absolute;
