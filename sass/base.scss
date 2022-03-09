@@ -106,8 +106,6 @@ main,
 section {
    display: block;
    font-size: 62.5%;
-   // boxes
-   box-sizing: border-box;
 }
 body {
    line-height: 1;
@@ -164,6 +162,10 @@ body {
    font-family: 'Roboto', sans-serif;
    font-size: 2rem;
 
+   // Principal
+   position: relative;
+   box-sizing: border-box;
+
    // HEADER
    header {
       nav {
@@ -209,5 +211,52 @@ body {
             width: 1rem;
          }
       }
+   }
+
+   #loader {
+      animation: loader-animation 1s 3s forwards;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #f1f1f1;
+
+      background: rgb(147, 86, 220);
+      background: -moz-linear-gradient(
+         355deg,
+         rgba(147, 86, 220, 1) 22%,
+         rgba(255, 121, 218, 1) 90%
+      );
+      background: -webkit-linear-gradient(
+         355deg,
+         rgba(147, 86, 220, 1) 22%,
+         rgba(255, 121, 218, 1) 90%
+      );
+      background: linear-gradient(
+         355deg,
+         rgba(147, 86, 220, 1) 22%,
+         rgba(255, 121, 218, 1) 90%
+      );
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
+      transition: all 0.2s;
+   }
+}
+
+@keyframes loader-animation {
+   0% {
+      opacity: 1;
+   }
+
+   99% {
+      z-index: 500;
+   }
+
+   100% {
+      opacity: 0;
+      z-index: -500;
+      display: none;
    }
 }

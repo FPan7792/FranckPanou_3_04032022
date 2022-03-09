@@ -25,16 +25,13 @@ main {
 
    > div {
       background-color: $fond_blanc;
-      // border: black 2px solid;
       margin-top: 230px;
       border-top-left-radius: 40px;
       border-top-right-radius: 40px;
       padding: 1rem;
 
       .restaurant-bloc-titre {
-         // padding-top: 1rem;
          margin: 1.2rem 0 2.3rem;
-         // border: green 2px solid;
          display: flex;
          justify-content: space-between;
          align-items: center;
@@ -47,6 +44,7 @@ main {
 
          i {
             margin-right: 1rem;
+            cursor: pointer;
          }
       }
 
@@ -71,11 +69,11 @@ main {
       .carte-recette {
          background-color: #fff;
          border-radius: 12px;
-         // padding: 0.8rem 0.6rem;
          margin-bottom: 1rem;
          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
          cursor: pointer;
          display: flex;
+         opacity: 0;
 
          > :first-child {
             padding: 0.8rem 0.6rem;
@@ -123,36 +121,41 @@ main {
             transition: all 0.4s ease-in;
             border-top-right-radius: 12px;
             border-bottom-right-radius: 12px;
-         }
-
-         .fa-circle-check {
-            opacity: 0;
+            overflow: hidden;
          }
 
          &:hover {
             .label-check {
                width: 25%;
-               // border: black 2px solid;
             }
             .fa-circle-check {
                animation: spin-circle-check 0.5s forwards;
             }
          }
+      }
 
-         @keyframes spin-circle-check {
-            0% {
-               transform: rotate(0deg);
-            }
+      #entrées {
+         opacity: 0;
+         animation: apparition-titres 1s ease-out forwards;
+      }
+      #entrées ~ .carte-recette {
+         animation: apparition-recettes 1.2s 0.5s ease-out forwards;
+      }
 
-            1% {
-               opacity: 100%;
-            }
+      #plats {
+         opacity: 0;
+         animation: apparition-titres 1s ease-out forwards;
+      }
+      #plats ~ .carte-recette {
+         animation: apparition-recettes 1.2s 0.7s ease-out forwards;
+      }
 
-            100% {
-               transform: rotate(360deg);
-               opacity: 100%;
-            }
-         }
+      #desserts {
+         opacity: 0;
+         animation: apparition-titres 1s ease-out forwards;
+      }
+      #desserts ~ .carte-recette {
+         animation: apparition-recettes 1.2s 0.9s ease-out forwards;
       }
 
       .bouton-commander {

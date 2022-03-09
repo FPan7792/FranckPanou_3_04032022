@@ -1,3 +1,4 @@
+@charset "UTF-8";
 main {
   position: relative;
   display: inline-block;
@@ -34,6 +35,7 @@ main > div .restaurant-bloc-titre h2 {
 }
 main > div .restaurant-bloc-titre i {
   margin-right: 1rem;
+  cursor: pointer;
 }
 main > div h3 {
   position: relative;
@@ -58,6 +60,7 @@ main > div .carte-recette {
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   display: flex;
+  opacity: 0;
 }
 main > div .carte-recette > :first-child {
   padding: 0.8rem 0.6rem;
@@ -99,9 +102,7 @@ main > div .carte-recette .label-check {
   transition: all 0.4s ease-in;
   border-top-right-radius: 12px;
   border-bottom-right-radius: 12px;
-}
-main > div .carte-recette .fa-circle-check {
-  opacity: 0;
+  overflow: hidden;
 }
 main > div .carte-recette:hover .label-check {
   width: 25%;
@@ -109,17 +110,26 @@ main > div .carte-recette:hover .label-check {
 main > div .carte-recette:hover .fa-circle-check {
   animation: spin-circle-check 0.5s forwards;
 }
-@keyframes spin-circle-check {
-  0% {
-    transform: rotate(0deg);
-  }
-  1% {
-    opacity: 100%;
-  }
-  100% {
-    transform: rotate(360deg);
-    opacity: 100%;
-  }
+main > div #entrées {
+  opacity: 0;
+  animation: apparition-titres 1s ease-out forwards;
+}
+main > div #entrées ~ .carte-recette {
+  animation: apparition-recettes 1.2s 0.5s ease-out forwards;
+}
+main > div #plats {
+  opacity: 0;
+  animation: apparition-titres 1s ease-out forwards;
+}
+main > div #plats ~ .carte-recette {
+  animation: apparition-recettes 1.2s 0.7s ease-out forwards;
+}
+main > div #desserts {
+  opacity: 0;
+  animation: apparition-titres 1s ease-out forwards;
+}
+main > div #desserts ~ .carte-recette {
+  animation: apparition-recettes 1.2s 0.9s ease-out forwards;
 }
 main > div .bouton-commander {
   width: 100%;
@@ -150,6 +160,36 @@ main > div .bouton-commander button {
 main > div .bouton-commander button:hover {
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.4);
   transform: scale(1.05);
+}
+
+@keyframes spin-circle-check {
+  0% {
+    transform: rotate(0deg);
+  }
+  1% {
+    opacity: 100%;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 100%;
+  }
+}
+@keyframes apparition-titres {
+  from {
+    opacity: 0%;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+@keyframes apparition-recettes {
+  from {
+    opacity: 0%;
+    transform: translateY(0.9rem);
+  }
+  to {
+    opacity: 100%;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

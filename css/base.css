@@ -106,7 +106,6 @@ main,
 section {
   display: block;
   font-size: 62.5%;
-  box-sizing: border-box;
 }
 
 body {
@@ -147,6 +146,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-family: "Roboto", sans-serif;
   font-size: 2rem;
+  position: relative;
+  box-sizing: border-box;
 }
 body header nav {
   width: 100%;
@@ -185,6 +186,37 @@ body footer a {
 }
 body footer a i {
   width: 1rem;
+}
+body #loader {
+  animation: loader-animation 1s 3s forwards;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f1f1f1;
+  background: #9356dc;
+  background: -moz-linear-gradient(355deg, #9356dc 22%, #ff79da 90%);
+  background: -webkit-linear-gradient(355deg, #9356dc 22%, #ff79da 90%);
+  background: linear-gradient(355deg, #9356dc 22%, #ff79da 90%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
+  transition: all 0.2s;
+}
+
+@keyframes loader-animation {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    z-index: 500;
+  }
+  100% {
+    opacity: 0;
+    z-index: -500;
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=base.css.map */
