@@ -20,7 +20,43 @@ main > div {
   margin-top: 230px;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
-  padding: 1rem;
+  padding: 2.5rem 1.5rem;
+}
+main > div .icone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 3rem;
+  margin-right: 1rem;
+}
+main > div .icone:hover .fa-heart:first-child {
+  opacity: 0;
+}
+main > div .icone:hover .fa-heart:last-child {
+  opacity: 1;
+}
+main > div .icone .fa-heart:first-child {
+  transition: all 0.5s ease;
+  position: absolute;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  overflow: hidden;
+  height: 3rem;
+  width: 3rem;
+}
+main > div .icone .fa-heart:last-child {
+  transition: all 0.5s ease;
+  position: absolute;
+  opacity: 0;
+  color: #9356dc;
+  width: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 main > div .restaurant-bloc-titre {
   margin: 1.2rem 0 2.3rem;
@@ -31,7 +67,7 @@ main > div .restaurant-bloc-titre {
 main > div .restaurant-bloc-titre h2 {
   text-transform: capitalize;
   font-family: "Shrikhand", cursive;
-  font-size: 1.6rem;
+  font-size: 2.7rem;
 }
 main > div .restaurant-bloc-titre i {
   margin-right: 1rem;
@@ -41,8 +77,8 @@ main > div h3 {
   position: relative;
   text-transform: uppercase;
   font-weight: 400;
-  font-size: 1rem;
-  margin: 2rem 0 1.4rem 0;
+  font-size: 1.6rem;
+  margin: 3.5rem 0;
 }
 main > div h3::after {
   position: absolute;
@@ -56,31 +92,33 @@ main > div h3::after {
 main > div .carte-recette {
   background-color: #fff;
   border-radius: 12px;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   display: flex;
   opacity: 0;
 }
 main > div .carte-recette > :first-child {
-  padding: 0.8rem 0.6rem;
+  padding: 1.2rem 1.2rem;
   min-width: 80%;
   width: 100%;
 }
 main > div .carte-recette > :first-child p {
   font-weight: bold;
-  font-size: 1.1rem;
-  margin-bottom: 0.4rem;
+  font-size: 1.8rem;
+  margin-bottom: 0.7rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  padding-bottom: 1px;
 }
 main > div .carte-recette > :first-child div {
   display: flex;
   justify-content: space-between;
 }
 main > div .carte-recette > :first-child div span {
-  font-size: 0.9rem;
+  font-size: 1.5rem;
+  padding-bottom: 0.1rem;
 }
 main > div .carte-recette > :first-child div :first-child {
   font-weight: 300;
@@ -90,7 +128,7 @@ main > div .carte-recette > :first-child div :first-child {
 }
 main > div .carte-recette > :first-child div :last-child {
   font-weight: bold;
-  margin-right: 0.4rem;
+  margin-right: 0.8rem;
 }
 main > div .carte-recette .label-check {
   color: #f4f4f4;
@@ -105,7 +143,7 @@ main > div .carte-recette .label-check {
   overflow: hidden;
 }
 main > div .carte-recette:hover .label-check {
-  width: 25%;
+  width: 20rem;
 }
 main > div .carte-recette:hover .fa-circle-check {
   animation: spin-circle-check 0.5s forwards;
@@ -140,22 +178,19 @@ main > div .bouton-commander {
 }
 main > div .bouton-commander button {
   cursor: pointer;
+  transition: all 0.2s ease;
   margin: 0 auto;
   border: none;
   border-radius: 30px;
-  height: 2.5rem;
+  height: 5rem;
   margin-bottom: 1rem;
-  padding: 0 2.5rem;
+  padding: 0 5rem;
   color: #efefef;
   font-weight: bold;
-  font-size: 0.8rem;
+  font-size: 1.5rem;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
   background: #9356dc;
-  background: -moz-linear-gradient(355deg, #9356dc 22%, #ff79da 90%);
-  background: -webkit-linear-gradient(355deg, #9356dc 22%, #ff79da 90%);
   background: linear-gradient(355deg, #9356dc 22%, #ff79da 90%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
-  transition: all 0.2s;
 }
 main > div .bouton-commander button:hover {
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.4);

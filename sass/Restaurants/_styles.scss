@@ -28,7 +28,50 @@ main {
       margin-top: 230px;
       border-top-left-radius: 40px;
       border-top-right-radius: 40px;
-      padding: 1rem;
+      padding: 2.5rem 1.5rem;
+
+      .icone {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         position: relative;
+         width: 3rem;
+         margin-right: 1rem;
+
+         &:hover {
+            .fa-heart:first-child {
+               opacity: 0;
+            }
+            .fa-heart:last-child {
+               opacity: 1;
+            }
+         }
+
+         .fa-heart:first-child {
+            transition: all 0.5s ease;
+            position: absolute;
+            width: 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1;
+            overflow: hidden;
+            height: 3rem;
+            width: 3rem;
+         }
+
+         .fa-heart:last-child {
+            transition: all 0.5s ease;
+            position: absolute;
+            opacity: 0;
+            color: rgb(147, 86, 220);
+
+            width: 3rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+         }
+      }
 
       .restaurant-bloc-titre {
          margin: 1.2rem 0 2.3rem;
@@ -39,7 +82,7 @@ main {
          h2 {
             text-transform: capitalize;
             font-family: 'Shrikhand', cursive;
-            font-size: 1.6rem;
+            font-size: 2.7rem;
          }
 
          i {
@@ -52,8 +95,8 @@ main {
          position: relative;
          text-transform: uppercase;
          font-weight: 400;
-         font-size: 1rem;
-         margin: 2rem 0 1.4rem 0;
+         font-size: 1.6rem;
+         margin: 3.5rem 0;
 
          &::after {
             position: absolute;
@@ -69,24 +112,25 @@ main {
       .carte-recette {
          background-color: #fff;
          border-radius: 12px;
-         margin-bottom: 1rem;
+         margin-bottom: 1.5rem;
          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
          cursor: pointer;
          display: flex;
          opacity: 0;
 
          > :first-child {
-            padding: 0.8rem 0.6rem;
+            padding: 1.2rem 1.2rem;
             min-width: 80%;
             width: 100%;
 
             p {
                font-weight: bold;
-               font-size: 1.1rem;
-               margin-bottom: 0.4rem;
+               font-size: 1.8rem;
+               margin-bottom: 0.7rem;
                white-space: nowrap;
                overflow: hidden;
                text-overflow: ellipsis;
+               padding-bottom: 1px;
             }
 
             div {
@@ -94,7 +138,8 @@ main {
                justify-content: space-between;
 
                span {
-                  font-size: 0.9rem;
+                  font-size: 1.5rem;
+                  padding-bottom: 0.1rem;
                }
 
                :first-child {
@@ -106,7 +151,7 @@ main {
 
                :last-child {
                   font-weight: bold;
-                  margin-right: 0.4rem;
+                  margin-right: 0.8rem;
                }
             }
          }
@@ -126,7 +171,7 @@ main {
 
          &:hover {
             .label-check {
-               width: 25%;
+               width: 20rem;
             }
             .fa-circle-check {
                animation: spin-circle-check 0.5s forwards;
@@ -167,34 +212,23 @@ main {
 
          button {
             cursor: pointer;
+            transition: all 0.2s ease;
             margin: 0 auto;
             border: none;
             border-radius: 30px;
-            height: 2.5rem;
+            height: 5rem;
             margin-bottom: 1rem;
-            padding: 0 2.5rem;
+            padding: 0 5rem;
             color: #efefef;
             font-weight: bold;
-            font-size: 0.8rem;
+            font-size: 1.5rem;
             box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
             background: rgb(147, 86, 220);
-            background: -moz-linear-gradient(
-               355deg,
-               rgba(147, 86, 220, 1) 22%,
-               rgba(255, 121, 218, 1) 90%
-            );
-            background: -webkit-linear-gradient(
-               355deg,
-               rgba(147, 86, 220, 1) 22%,
-               rgba(255, 121, 218, 1) 90%
-            );
             background: linear-gradient(
                355deg,
                rgba(147, 86, 220, 1) 22%,
                rgba(255, 121, 218, 1) 90%
             );
-            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
-            transition: all 0.2s;
 
             &:hover {
                box-shadow: 0 5px 8px rgba(0, 0, 0, 0.4);
