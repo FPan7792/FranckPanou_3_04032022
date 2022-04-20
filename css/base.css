@@ -150,6 +150,8 @@ body {
   font-size: 1rem;
   position: relative;
   box-sizing: border-box;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 body header nav {
   width: 100%;
@@ -219,7 +221,7 @@ body #loader {
 }
 @media screen and (min-width: 768px) {
   footer nav {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -232,10 +234,6 @@ body #loader {
 @media screen and (min-width: 1024px) {
   header nav {
     display: none;
-  }
-
-  footer nav {
-    font-size: 2rem;
   }
 }
 

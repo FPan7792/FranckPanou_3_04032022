@@ -112,11 +112,13 @@ main {
       .carte-recette {
          background-color: #fff;
          border-radius: 12px;
-         margin-bottom: 1.5rem;
          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
          cursor: pointer;
          display: flex;
          opacity: 0;
+         max-width: 800px;
+         margin: 0 auto;
+         margin-bottom: 1.5rem;
 
          > :first-child {
             padding: 1.2rem 1.2rem;
@@ -235,6 +237,60 @@ main {
                transform: scale(1.05);
             }
          }
+      }
+   }
+}
+
+@media screen and (min-width: 1024px) {
+   main {
+      > div {
+         .carte-recette {
+            width: 70%;
+            margin: 20px auto;
+            border: black 1px solid;
+            height: 80px;
+
+            :last-child {
+               font-size: 1.5rem;
+            }
+
+            p {
+               margin-top: 0.5rem;
+            }
+         }
+
+         .restaurant-bloc-titre h2 {
+            margin: 0 auto;
+            font-size: xx-large;
+         }
+
+         h3 {
+            font-size: x-large;
+            // text-align: center;
+            font-style: italic;
+            color: $pricipal_vert;
+            margin-left: 100px;
+
+            &::after {
+               position: absolute;
+               content: '';
+               display: inline-block;
+               border-top: #99e2d0 6px solid;
+               width: 400px;
+               top: 130%;
+               left: 20px;
+               margin: 0 auto;
+            }
+         }
+      }
+
+      .bouton-commander button {
+         width: 400px;
+      }
+
+      .icone {
+         font-size: 1.4rem;
+         right: 70px;
       }
    }
 }
