@@ -61,23 +61,11 @@ main {
          font-weight: bold;
          font-size: 1.5rem;
          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-         background: rgb(147, 86, 220);
-         background: -moz-linear-gradient(
-            355deg,
-            rgba(147, 86, 220, 1) 22%,
-            rgba(255, 121, 218, 1) 90%
-         );
-         background: -webkit-linear-gradient(
-            355deg,
-            rgba(147, 86, 220, 1) 22%,
-            rgba(255, 121, 218, 1) 90%
-         );
          background: linear-gradient(
             355deg,
             rgba(147, 86, 220, 1) 22%,
             rgba(255, 121, 218, 1) 90%
          );
-         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#9356dc",endColorstr="#ff79da",GradientType=1);
 
          &:hover {
             box-shadow: 0 5px 8px rgba(0, 0, 0, 0.4);
