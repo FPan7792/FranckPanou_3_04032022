@@ -160,7 +160,6 @@ main #restaurants .conteneur-cartes-restaurants .carte-restaurant .carte-restaur
   margin-bottom: 0.5rem;
   font-weight: bold;
   font-size: 1.8rem;
-  text-transform: capitalize;
 }
 main #restaurants .conteneur-cartes-restaurants .carte-restaurant .carte-restaurant-infos p:last-child {
   font-weight: 300;

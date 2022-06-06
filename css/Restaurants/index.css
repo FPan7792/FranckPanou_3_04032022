@@ -55,7 +55,7 @@ main > div .icone .fa-heart:last-child {
   transition: all 0.5s ease;
   position: absolute;
   opacity: 0;
-  color: #9356dc;
+  color: violet;
   display: flex;
   justify-content: center;
   align-items: center;
