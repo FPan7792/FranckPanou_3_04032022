@@ -16,7 +16,7 @@ main img {
   top: 0;
 }
 main > div {
-  background-color: #f4f4f4;
+  background-color: white;
   margin-top: 230px;
   border-top-left-radius: 40px;
   border-top-right-radius: 40px;
@@ -31,10 +31,13 @@ main > div .icone {
   margin-right: 1rem;
 }
 main > div .icone:hover .fa-heart:first-child {
-  opacity: 0;
+  height: 0;
+  width: 0;
 }
 main > div .icone:hover .fa-heart:last-child {
   opacity: 1;
+  width: 100%;
+  height: 100%;
 }
 main > div .icone .fa-heart:first-child {
   transition: all 0.5s ease;
@@ -53,7 +56,6 @@ main > div .icone .fa-heart:last-child {
   position: absolute;
   opacity: 0;
   color: #9356dc;
-  width: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,7 +67,6 @@ main > div .restaurant-bloc-titre {
   align-items: center;
 }
 main > div .restaurant-bloc-titre h2 {
-  text-transform: capitalize;
   font-family: "Shrikhand", cursive;
   font-size: 2.7rem;
 }
@@ -129,11 +130,13 @@ main > div .carte-recette > :first-child div :first-child {
   text-overflow: ellipsis;
 }
 main > div .carte-recette > :first-child div :last-child {
+  font-size: small;
   font-weight: bold;
   margin-right: 0.8rem;
+  margin-left: 2.2rem;
 }
 main > div .carte-recette .label-check {
-  color: #f4f4f4;
+  color: white;
   background-color: #99e2d0;
   width: 0;
   display: flex;
@@ -187,7 +190,7 @@ main > div .bouton-commander button {
   height: 5rem;
   margin-bottom: 1rem;
   padding: 0 5rem;
-  color: #efefef;
+  color: white;
   font-weight: bold;
   font-size: 1.5rem;
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
@@ -201,9 +204,7 @@ main > div .bouton-commander button:hover {
 
 @media screen and (min-width: 1024px) {
   main > div .carte-recette {
-    width: 70%;
     margin: 20px auto;
-    border: black 1px solid;
     height: 80px;
   }
   main > div .carte-recette :last-child {
@@ -217,9 +218,8 @@ main > div .bouton-commander button:hover {
     font-size: xx-large;
   }
   main > div h3 {
-    font-size: x-large;
+    font-size: xx-large;
     font-style: italic;
-    color: #99e2d0;
     margin-left: 100px;
   }
   main > div h3::after {
@@ -227,9 +227,8 @@ main > div .bouton-commander button:hover {
     content: "";
     display: inline-block;
     border-top: #99e2d0 6px solid;
-    width: 400px;
+    width: 10%;
     top: 130%;
-    left: 20px;
     margin: 0 auto;
   }
   main .bouton-commander button {

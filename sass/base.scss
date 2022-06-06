@@ -201,10 +201,14 @@ body {
       background-color: #404040;
       padding-bottom: 1rem;
       font-size: 1.4rem;
-      font-weight: bold;
+      font-weight: 700;
 
       nav {
          padding: 1.5em;
+
+         .simple {
+            font-weight: 500;
+         }
       }
 
       svg {
@@ -224,6 +228,7 @@ body {
       animation: loader-animation 1s 3s forwards;
       position: fixed;
       top: 0;
+      left: 0;
       width: 100%;
       height: 100%;
       display: flex;

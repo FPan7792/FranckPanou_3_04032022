@@ -33,7 +33,8 @@ main {
 
       h2 {
          text-align: center;
-         font-size: 1.8rem;
+         font-size: 2.3rem;
+         line-height: 2.7rem;
          padding-top: 1.3rem;
          padding-bottom: 0.8rem;
          font-weight: bold;
@@ -57,7 +58,7 @@ main {
          height: 4rem;
          margin-bottom: 1rem;
          padding: 0 2.8rem;
-         color: #efefef;
+         color: white;
          font-weight: bold;
          font-size: 1.5rem;
          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
@@ -75,11 +76,10 @@ main {
    }
 
    #fonctionnement {
-      padding: 3rem 1.5rem;
+      padding: 3rem 2.5rem;
       display: flex;
       justify-content: center;
       flex-direction: column;
-      // font-weight: bold;
 
       h2 {
          margin-bottom: 1.5rem;
@@ -96,12 +96,16 @@ main {
          background-color: #f4f4f4;
          cursor: pointer;
          transition: all 0.1s ease-in;
-         // transition: background-color 0.8s ease-in-out;
+         margin-left: 10px;
 
          &:hover {
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
             // background-color: #f8f8f8;
             background: #ebe6f1;
+
+            i {
+               color: #9356dc;
+            }
          }
 
          i {
@@ -113,7 +117,7 @@ main {
             position: absolute;
             color: #f1f1f1;
             left: 0;
-            transform: translateX(-0.5rem);
+            transform: translateX(-1rem);
             background-color: #9356dc;
             border-radius: 50%;
             display: flex;
@@ -132,7 +136,7 @@ main {
    }
 
    #restaurants {
-      padding: 3rem 1.5rem;
+      padding: 3rem 2.5rem;
       background-color: #f4f4f4;
 
       h2 {
@@ -193,6 +197,7 @@ main {
 
                .icone {
                   // border: black 2px solid;
+                  overflow: hidden;
                   display: flex;
                   justify-content: center;
                   align-items: center;
@@ -202,15 +207,18 @@ main {
 
                   &:hover {
                      .fa-heart:first-child {
-                        opacity: 0;
+                        height: 0;
+                        width: 0;
                      }
                      .fa-heart:last-child {
                         opacity: 1;
+                        height: 100%;
+                        width: 100%;
                      }
                   }
 
                   .fa-heart:first-child {
-                     transition: all 0.5s ease;
+                     transition: all 1s ease;
                      position: absolute;
                      width: 3rem;
                      display: flex;
@@ -218,16 +226,15 @@ main {
                      align-items: center;
                      z-index: 0;
                      overflow: hidden;
-                     height: 3rem;
-                     width: 3rem;
+                     height: 100%;
+                     width: 100%;
                   }
 
                   .fa-heart:last-child {
-                     transition: all 0.5s ease;
+                     transition: all 1s ease;
                      position: absolute;
                      opacity: 0;
-                     color: rgb(147, 86, 220);
-
+                     color: violet;
                      width: 3rem;
                      display: flex;
                      justify-content: center;
